@@ -1,0 +1,324 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #020a14;
+      --panel: #060f1c;
+      --border: #0d2540;
+      --blue: #00d4ff;
+      --green: #00ff9d;
+      --red: #ff2d5e;
+      --gold: #ffd700;
+      --text: #b8d4ee;
+      --dim: #2a4a6a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Share Tech Mono', monospace;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* scanline effect */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      font-size: 32px;
+      color: var(--blue);
+      filter: drop-shadow(0 0 8px var(--blue));
+    }
+
+    .logo-text {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: 5px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      text-shadow: 0 0 8px var(--blue);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.2s;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .btn-primary {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .btn-primary:hover {
+      background: #00d4ff18;
+      box-shadow: 0 0 20px #00d4ff44;
+    }
+
+    .btn-success {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .btn-success:hover {
+      background: #00ff9d18;
+      box-shadow: 0 0 20px #00ff9d44;
+    }
+
+    .btn-wa {
+      border-color: #25D366;
+      color: #25D366;
+    }
+
+    .btn-wa:hover {
+      background: #25D36618;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .ascii-preview {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px;
+      color: var(--blue);
+      box-shadow: 0 0 30px rgba(0,212,255,0.1);
+    }
+
+    .ascii-preview pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* Features */
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      margin-bottom: 48px;
+      text-align: center;
+      letter-spacing: 3px;
+      color: var(--blue);
+      text-shadow: 0 0 10px var(--blue);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px 24px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: var(--green);
+    }
+
+    .feature-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--blue);
+    }
+
+    /* How it works */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 60px 0 80px;
+      gap: 20px;
+    }
+
+    .step {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      color: var(--blue);
+      box-shadow: 0 0 15px var(--blue);
+    }
+
+    /* Pricing / License */
+    .license-card {
+      background: var(--panel);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto 80px;
+      text-align: center;
+    }
+
+    .license-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .price {
+      font-size: 48px;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--green);
+      margin: 24px 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--dim);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 0;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
+      header {
+        flex-direction: column;
+      }
+    }
+
+    /* Code blocks */
+    code {
+      background: #040b18;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--gold);
+      border: 1px solid var(--border);
+    }
+
+    .highlight {
+      color: var(--green);
+    }

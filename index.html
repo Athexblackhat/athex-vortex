@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHEX VORTEX – Tunneling & Port Forwarding Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">ATHEX VORTEX</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#license">License</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Expose Local Servers to the World</h1>
+        <p>One‑click TCP, UDP & hybrid tunneling with a beautiful real‑time dashboard. Secure, hardware‑locked, and cross‑platform.</p>
+        <div class="hero-buttons">
+          <a href="https://github.com/Athexblackhat/athex-vortex" class="btn btn-primary">⬇ Download Script</a>
+          <a href="#license" class="btn btn-success">🔑 Get License</a>
+        </div>
+        <p style="margin-top: 24px; font-size: 14px;">
+          <code>python run.py</code> — Auto‑installs dependencies. Works on Windows & Linux.
+        </p>
+      </div>
+      <div class="ascii-preview">
+        <pre style="color: var(--green);">
+  █████╗ ████████╗██╗  ██╗███████╗██╗  ██╗
+ ██╔══██╗╚══██╔══╝██║  ██║██╔════╝╚██╗██╔╝
+ ███████║   ██║   ███████║█████╗   ╚███╔╝
+ ██╔══██║   ██║   ██╔══██║██╔══╝   ██╔██╗
+ ██║  ██║   ██║   ██║  ██║███████╗██╔╝ ██╗
+ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+  ██╗   ██╗ ██████╗ ██████╗ ████████╗███████╗██╗  ██╗
+  ██║   ██║██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝╚██╗██╔╝
+  ██║   ██║██║   ██║██████╔╝   ██║   █████╗   ╚███╔╝
+  ╚██╗ ██╔╝██║   ██║██╔══██╗   ██║   ██╔══╝   ██╔██╗
+   ╚████╔╝ ╚██████╔╝██║  ██║   ██║   ███████╗██╔╝ ██╗
+    ╚═══╝   ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+        </pre>
+        <p style="margin-top: 16px; color: var(--dim);">
+          Dashboard: <span style="color: var(--blue);">http://localhost:8770</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <h2 class="section-title">⬡ Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔁</div>
+          <h3>TCP, UDP & Hybrid</h3>
+          <p>Forward any protocol. TCP for reliability, UDP for low latency, or both simultaneously with hybrid mode.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Live Dashboard</h3>
+          <p>Real‑time bandwidth graphs, CPU/RAM meters, and event logs — all updated via WebSocket.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>3D Globe Visualizer</h3>
+          <p>Interactive Three.js globe shows glowing markers for every active tunnel.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>License Protection</h3>
+          <p>RSA‑2048 signed license keys bound to your hardware fingerprint (HWID). Lifetime or time‑limited.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💾</div>
+          <h3>Persistent Storage</h3>
+          <p>SQLite database keeps tunnel history and logs across restarts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Auto‑Setup</h3>
+          <p>Installs missing Python packages on first run. Just download and execute.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works">
+      <h2 class="section-title">⬡ How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 style="color: var(--blue);">Run</h3>
+          <p><code>python run.py</code></p>
+          <p style="margin-top: 8px;">Auto‑installs dependencies and starts the dashboard.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 style="color: var(--blue);">Activate</h3>
+          <p>Paste your license key</p>
+          <p style="margin-top: 8px;">Get it via WhatsApp using your HWID.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 style="color: var(--blue);">Tunnel</h3>
+          <p>Enter local port & protocol</p>
+          <p style="margin-top: 8px;">Click <strong>LAUNCH</strong> — a public address is generated.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3 style="color: var(--blue);">Share</h3>
+          <p>Give the public IP:port to your users</p>
+          <p style="margin-top: 8px;">They connect to your local service.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- License -->
+    <section id="license">
+      <h2 class="section-title">⬡ Licensing</h2>
+      <div class="license-card">
+        <h3>Lifetime License</h3>
+        <div class="price">$99.00</div>
+        <p style="margin-bottom: 24px;">One‑time payment. Unlimited tunnels. Bound to your HWID.</p>
+        <a href="https://wa.me/923490916663?text=I%20want%20to%20buy%20a%20license%20for%20ATHEX%20VORTEX" class="btn btn-wa" style="margin-bottom: 16px;">
+          📲 Buy via WhatsApp
+        </a>
+        <p style="font-size: 12px; color: var(--dim);">Need a trial or custom plan? Contact us.</p>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <p style="margin-bottom: 16px;">
+        <span style="color: var(--blue);">⬡ ATHEX VORTEX v1.0.0</span> — Tunneling & Port Forwarding Suite
+      </p>
+      <p>
+        <a href="https://wa.me/923490916663" style="color: var(--green); text-decoration: none;">WhatsApp Support</a> &nbsp;|&nbsp;
+        <a href="https://github.com/Athexblackhat/athex-vortex" style="color: var(--dim); text-decoration: none;">GitHub Repository</a>
+      </p>
+      <p style="margin-top: 24px; font-size: 12px;">
+        © 2026 ATHEX VORTEX. All rights reserved. | Designed for secure local exposure.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Simple smooth scroll for anchor links -->
+  <script src="/JS/main.js"></script>
+</body>
+</html>
